@@ -1,9 +1,12 @@
 import './styles.scss';
-import React from 'react'
-import {render} from 'react-dom'
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
 import App from './components/App.jsx';
-
+import {store} from './reducers'
 render(
-  <App/>,
-  document.getElementById('root')
-)
+  <Provider store={store}>
+    <App />
+
+  </Provider>,
+   document.getElementById('root'));
